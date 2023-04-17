@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kirim Pesan</title>
+    <link rel="stylesheet" href="message-us.css">
+    <link rel="shortcut icon" href="asset/images/mb7.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar">
+       <a>
+        <img class="navicon" src="asset/images/revou.png" alt="icon">
+       </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Our Profile</a></li>
+          <li><a href="achi.html">Achievement</a></li>
+          <li class="li-m"><a href="message-us.html">Message Us</a></li>
+        </ul>
+      </nav>
+
+      <section class="s-m">
+        <div class="container-m">
+          <h1 class="h1-m">Message Us</h1>
+  
+          <div class="row-row">
+            <div class="column">
+
+              <div class="m-f">
+                <form class="form">
+
+                  <div class="row">
+                    <div class="label-form">
+                      <label class="label" for="nama">Nama</label>
+                      <br>
+                      <label class="label" for="tanggal">Tanggal Lahir</label>
+                      <br>
+                      <label class="label" for="gender">Jenis Kelamin</label>
+                      <br>
+                      <label class="label" for="pesan">Pesan</label>
+                      <br>
+                    </div>
+       
+                    <div class="point">
+                     <b>:</b>
+                     <br>
+                     <b>:</b>
+                     <br>
+                     <b>:</b>
+                     <br>
+                     <b>:</b>
+                    </div>       
+       
+                    <div class="input-form">
+                     <input class="name" type="text" id="name" placeholder="masukkan nama">
+       
+                     <input class="date" type="date" id="date" placeholder="masukkan tanggal lahir">
+
+                     <br>
+       
+                     <input class="radio" type="radio" id="Laki-laki" name="radioItem" value="Laki-laki">
+                     <label for="laki-laki">Laki-laki</label>
+               
+                     <input class="radio" type="radio" id="Perempuan" name="radioItem" value="Perempuan">
+                     <label for="perempuan">Perempuan</label>
+       
+                     <br>
+
+                     <input type="text" class="message" id="message" placeholder="Pesan"></input>
+                    </div>
+       
+                  </div>
+
+                  <input class="button" type="button" id="btn" value="submit">
+
+               </form>
+              </div>
+              
+              </div>
+    
+              <div class="show">
+                <div class="display">
+                  <div class="p-m">
+                  <p>Current Time : <span id="display-time"></span></p>
+                  <p>Nama: <span id="display-name"></span></p>
+                  <p>Tanggal Lahir: <span id="display-date"></span></p>
+                  <p>Jenis Kelamin :<span id="display_radio"></span></p>
+                  <p>Pesan: <span id="display-message"></span></p>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+          
+          <script>
+              var today = new Date();
+  
+              const txtName = document.getElementById("name");
+              const txtDate = document.getElementById("date");
+          
+              const txtMessage = document.getElementById("message");
+              const btn = document.getElementById("btn");
+          
+              const displayName = document.getElementById('display-name');
+              const displayDate = document.getElementById('display-date');
+              const displayMessage = document.getElementById('display-message');
+          
+              const displayRadio = document.getElementById('display_radio');
+              const radioBtns = document.querySelectorAll('input[name="radioItem"]');
+            
+              const displayTime = document.getElementById('display-time');
+          
+          function submitForm(e) {
+            e.preventDefault();
+            
+            let inputName = txtName.value;
+            let inputDate = txtDate.value;
+            let inputMessage = txtMessage.value;
+            let selectedMenu;
+            
+            let selectedDate = new Date(inputDate)
+            let date,month,year;
+            date = selectedDate.getDate();
+            month = selectedDate.getMonth() + 1;
+            year = selectedDate.getFullYear();
+            
+            if(date < 10) {
+            date = '0' + date;
+            }
+    
+            if (month < 10) {
+             month = '0' + month;
+            }
+  
+            date = date.toString().padStart(2, '0');
+            month = month.toString().padStart(2, '0');
+            const resultDate = `${date}/${month}/${year}`
+  
+            const currentTime = new Date().toString();
+  
+            for(const radioBtn of radioBtns) {
+               if(radioBtn.checked) {
+                selectedMenu = radioBtn.value;
+                break;
+               }
+            }
+            
+            displayName.innerHTML = inputName;
+            displayDate.innerText = resultDate;
+            displayMessage.innerHTML = inputMessage;
+            displayRadio.innerHTML = selectedMenu;
+            displayTime.innerHTML = currentTime;
+           
+            txtName.value = '';
+            txtDate.value = '';
+            txtMessage.value = '';
+  
+            if (name == "" || date == "" || radio == ""|| message == "") {
+              alert("Input tidak boleh kosong");
+              return false;
+            }
+  
+          }
+          
+          btn.addEventListener('click', submitForm);
+          
+  
+          var slideIndex = 1;
+          showDivs(slideIndex);
+  
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+  
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("banner");
+            if (n > x.length) {
+              slideIndex = 1
+            }
+            if (n < 1) {
+              slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+          }
+  
+          setInterval(() => {
+            plusDivs(1)
+          }
+          , 3000);
+  
+          </script>
+      </section>
+
+  <!-- Footer -->
+    <hr>
+    <p class="p2">Created By Valentino Julian</p>
+    <hr>
+  <!-- footer end -->
+
+  </body>
+</html>
