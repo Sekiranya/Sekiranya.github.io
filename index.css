@@ -1,0 +1,320 @@
+/* Navbar */
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navicon {
+    height: 6vh;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.li-m {
+  background-color: rgb(5, 155, 5);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav li:hover {
+  background-color: darkgray;
+  transition: .5s ease-in-out;
+  transition-delay: .2s;
+  border-radius: 8px;
+  
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  margin-top: 8vh;
+  margin-bottom: 5vh;
+  padding-left: 10vw;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navicon {
+    margin-bottom: 14px;
+  }
+
+  .row-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .m-f .button {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    width: 90%;
+  }
+
+  .row-row .display {
+    width: 75%;
+    flex-direction: column;
+    margin-top: 2vh;
+  }
+}
+
+hr {
+  border-width: 3px;
+}
+/* Navbar end */
+
+/* Header */
+.h1 {
+  font-size: 50px;
+  margin: 0;
+  text-shadow: 2px 2px yellow;
+}
+
+.p1 {
+  font-size: 20px;
+  margin: 20px 0 0;
+  text-shadow: 2px 2px yellow;
+}
+/* Header end */
+
+/* Banner */
+.banner {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5vh;
+  border-color: black;
+  border-bottom: 10px;
+  color: #fff;
+}
+
+.banner h1 {
+  font-size: 50px;
+  margin: 0;
+  text-shadow: 2px 2px #333;
+}
+
+.banner p {
+  font-size: 20px;
+  margin: 20px 0 0;
+  text-shadow: 2px 2px #333;
+}
+
+.next {
+  width: 20%;
+  height: auto;
+  text-align: center;
+  float: right;
+  margin-right: 2vw;
+}
+
+.prev {
+  width: 20%;
+  height: auto;
+  text-align: center;
+  margin-left: 2vw;
+}
+/* Banner end */
+
+/* Fasilitas */
+.h1-f {
+  font-weight: 800;
+  font-size: xx-large;
+}
+
+.facil {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.facil-blok {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 16vw;
+  padding-right: 12vw;
+}
+
+.facil-img {
+  border-radius: 999px;
+  width: 100%;
+  height: auto;
+}
+
+.facil-desk {
+  display: block;
+  font-size: x-large;
+}
+/* Fasilitas end */
+
+/* About */
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.about h2 {
+  text-align: center;
+}
+/* About end */
+
+/* Visi Misi */
+.vision-mission {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.vision-mission h2 {
+  text-align: center;
+}
+
+.vision-mission h3 {
+  margin-top: 50px;
+}
+
+.vision-mission p {
+  margin-bottom: 20px;
+}
+/* Visi Misi end */
+
+/* Message Us */
+
+.s-m {
+  display: flex;
+}
+
+.container-m {
+  margin-top: 8vh;
+  margin-bottom: 5vh;
+  padding-left: 10vw;
+}
+
+.row-row {
+  display: flex;
+}
+
+.column  {
+  flex: 50%;
+}
+
+.row {
+  display: flex;
+}
+
+.h1-m {
+  font-weight: 800;
+  font-size: xx-large;
+}
+
+.point {
+  flex: 2%;
+  line-height: 150%;
+}
+
+.label-form {
+  flex: 25%;
+}
+
+.label {
+  line-height: 150%;
+}
+
+.input-form {
+  flex: 73%;
+}
+
+.name {
+  border-radius: 5px;
+  margin-bottom: 1vh;
+  width: 60%;
+  padding: 1px 2px;
+}
+
+.date {
+  border-radius: 5px;
+  margin-bottom: 1vh;
+  width: 61%;
+}
+
+
+.radio {
+  display: inline-block;
+}
+
+.message {
+  width: 60%;
+  margin-bottom: 2vh;
+  padding-bottom: 10vh;
+  border: 2px;
+  border-style: solid;
+}
+
+.button {
+  cursor: pointer;
+  width: 33vw;
+  height: 5vh;
+}
+
+.p-m {
+  font-weight: bold;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+
+.show {
+  flex: 50%;
+}
+
+.display {
+  border: 2px;
+  border-style: solid;
+  width: 80%;
+  margin-right: 30vw;
+  margin-left: 5vh;
+  padding-top: 3vh;
+  padding-left: 5vh;
+  padding-bottom: 8vh;
+}
+
+/* Message Us end */
+
+/* Footer */
+.p2 {
+  text-align: right;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  padding-right: 2vw;
+}
+/* Footer end */

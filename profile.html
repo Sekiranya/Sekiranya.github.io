@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profil Kami</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="shortcut icon" href="asset/images/mb7.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+  <!-- Navbar -->
+   <nav class="navbar">
+     <a>
+      <img class="navicon" src="asset/images/revou.png" alt="icon">
+     </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="li-m"><a href="profile.html">Our Profile</a></li>
+      <li><a href="achi.html">Achievement</a></li>
+      <li><a href="message-us.html">Message Us</a></li>
+    </ul>
+  </nav>
+  <!-- Navbar end -->
+
+  <!-- Content -->
+
+      <!-- Banner -->
+      <section id="top-banner">
+        <img class="banner" src="asset/images/prestasi2.jpg" alt="banner" style="display: none;">
+        <img class="banner" src="asset/images/pretew.jpg" alt="banner" style="display: none;">
+        <img class="banner" src="asset/images/prestasi.jpg" alt="banner" style="display: none;">
+  
+        <button class="prev" onclick="plusDivs(-1)">Previous</button>
+        <button class="next" onclick="plusDivs(1)">Next</button>
+        <hr>
+      </section>
+      
+      <script>
+                var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+          showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("banner");
+          if (n > x.length) {
+            slideIndex = 1
+          }
+          if (n < 1) {
+            slideIndex = x.length
+          }
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          x[slideIndex - 1].style.display = "block";
+        }
+
+        setInterval(() => {
+          plusDivs(1)
+        }
+        , 3000);
+      </script>
+      <!-- Banner end -->
+
+      <!-- konten -->
+      <div class="kepsek">
+        <h1 style="text-align: center;">Prakata Kepala Sekolah</h1>
+        <div style="display: flex;">
+          <p style="text-align: center; width: 50%;">Puji syukur kepada Tuhan Yang Maha Esa atas segala rahmat yang diberikan sehingga SMA Beragam Budaya dapat mengaktifkan website sekolah ini.
+
+            Keberadaan website sekolah ini sangatlah penting sebagai media publikasi sekolah.
+    
+            Selain itu, website sekolah ini dapat dimanfaatkan sebagai sumber informasi bagi guru, siswa, orang tua/wali murid serta masyarakat umum untuk dapat mengakses seluruh informasi tentang sekolah ini dengan segala kegiatan dala melaksanakan proses pendidikan dan upaya perkembangannya.</p>
+           
+           <p style="text-align: center; width: 50%;">Oleh karena itu, dengan website ini diharapkan dapat meningkatkan mutu sekolah melalui pemberdayaan semua input yang ada serta bisa dijadikan media komunikasi yang positif antara sesama warga sekolah maupun masyarakat pemerhati pendidikan pada umumnya.
+          
+            Akhirnya, saran dan kritik membangun sangat diharapkan demi peningkatan mutu sekolah kami.</p> 
+        </div>
+        <p style="text-align: center; font-size: xx-large;">Terima kasih</p>
+        <hr>
+      </div>
+
+      <div class="kontainer">
+        <h1 class="judul-konten">Fitur Sekolah</h1>
+        <h2 class="h-konten">Kami menyediakan berbagai fitur mulai dari :</p>
+      </div>
+      <div class="kontainer-img">
+        <img class="img" src="asset/images/pramuka.jpg" alt="banner">
+        <img class="img" src="asset/images/besket.jpg" alt="banner">
+      </div>
+
+      <h2 style="text-align: center;">Beragam ekstrakurikuler</h2>
+      <hr>
+
+      <div class="container-fac">
+        <img class="img" src="asset/images/lab kom.jpg" alt="banner">
+        <img class="img" src="asset/images/perpus.jpg" alt="banner">
+      </div>
+
+      <h2 style="text-align: center;">Beragam ruangan produktif</h2>
+      <hr>
+
+      <div class="">
+
+      </div>
+      <!-- konten end -->
+
+  <!-- Content end -->
+
+  <!-- Footer -->
+    <hr>
+      <p class="p2">Created by Valentino Julian</p>
+    <hr>
+  <!-- Footer end -->
+
+  </body>
+</html>
