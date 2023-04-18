@@ -64,29 +64,28 @@ nav {
     }
   
     .nav-links {
+      padding: 0;
       width: 100%;
       flex-direction: column;
+    }
+  
+    nav li {
+      display: block;
+      padding: 8px;
+      color: #333;
+      text-align: center;
+    }
+  
+    .li-m {
+      display: block;
+      padding: 8px;
+      color: #333;
+      text-align: center;
     }
   
     .navicon {
-      margin-bottom: 14px;
-    }
-  
-    .row-row {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .m-f .button {
-      margin-top: 1vh;
-      margin-bottom: 1vh;
-      width: 90%;
-    }
-  
-    .row-row .display {
-      width: 75%;
-      flex-direction: column;
-      margin-top: 2vh;
+      margin-bottom: 10px;
+      text-align: center;
     }
   }
 
@@ -133,7 +132,7 @@ nav {
 
   .glass {
     position: absolute;
-    top: 0;
+
     left: 0;
     width: 100%;
     height: 100%;
@@ -183,7 +182,7 @@ nav {
   }
 
   .glass li:nth-child(5) {
-    left: 165;
+    left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
@@ -197,7 +196,7 @@ nav {
   }
 
   .glass li:nth-child(7) {
-    left: 35;
+    left: 35%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
