@@ -1,0 +1,662 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navicon {
+      height: 6vh;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .li-m {
+    background-color: rgb(5, 155, 5);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav li {
+    margin-left: 20px;
+    float: right;
+    height: auto;
+    width: auto;
+  }
+  
+  nav li:hover {
+    background-color: darkgray;
+    transition: .5s ease-in-out;
+    transition-delay: .2s;
+    border-radius: 8px;
+    
+  }
+  
+  .aa {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      padding: 0;
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    nav li {
+      display: block;
+      padding: 8px;
+      color: #333;
+      text-align: center;
+    }
+  
+    .li-m {
+      display: block;
+      padding: 8px;
+      color: #333;
+      text-align: center;
+    }
+  
+    .navicon {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  .h1 {
+    text-decoration: underline;
+    text-align: center;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #800080;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .music {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .music .bar {
+    width: 10px;
+    border-radius: 10px;
+    background: white;
+    animation: movement 1.5s ease-in-out infinite;
+  }
+
+  .bg {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #800080 0%,
+    #E90207 46%,
+    #ff8c00 100%);
+  }
+
+  .glass {
+    position: absolute;
+
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .glass li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: spin 5s linear infinite;
+    bottom: -150px;
+  }
+
+  .glass li:nth-child(1) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+  }
+
+  .glass li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+  }
+
+  .glass li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+  }
+
+  .glass li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+
+  .glass li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+  }
+
+  .glass li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+  }
+
+  .glass li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+  }
+
+  .glass li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+
+  .glass li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+  }
+
+  .glass li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+
+  .music .bar:nth-child(1) {
+    background: #b65252;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(2) {
+    background: pink;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(3) {
+    background: #b65252;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(4) {
+    background: pink;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(5) {
+    background: #b65252;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(6) {
+    background: pink;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(7) {
+    background: #b65252;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(8) {
+    background: pink;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(9) {
+    background: #b65252;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(10) {
+    background: pink;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(11) {
+    background: #b65252;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(12) {
+    background: pink;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(13) {
+    background: #b65252;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(14) {
+    background: pink;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(15) {
+    background: #b65252;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(16) {
+    background: pink;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(17) {
+    background: #b65252;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(18) {
+    background: pink;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(19) {
+    background: #b65252;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(20) {
+    background: pink;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(21) {
+    background: #b65252;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(22) {
+    background: pink;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(23) {
+    background: #b65252;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(24) {
+    background: pink;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(25) {
+    background: #b65252;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(26) {
+    background: pink;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(27) {
+    background: #b65252;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(28) {
+    background: pink;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(29) {
+    background: #b65252;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(30) {
+    background: pink;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(31) {
+    background: #b65252;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(32) {
+    background: pink;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(33) {
+    background: #b65252;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(34) {
+    background: pink;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(35) {
+    background: #b65252;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(36) {
+    background: pink;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(37) {
+    background: #b65252;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(38) {
+    background: pink;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(39) {
+    background: #b65252;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(40) {
+    background: pink;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(41) {
+    background: #b65252;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(42) {
+    background: pink;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(34) {
+    background: #b65252;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(44) {
+    background: pink;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(45) {
+    background: #b65252;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(46) {
+    background: pink;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(47) {
+    background: #b65252;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(48) {
+    background: pink;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(49) {
+    background: #b65252;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(50) {
+    background: pink;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(51) {
+    background: #b65252;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(52) {
+    background: pink;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(53) {
+    background: #b65252;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(54) {
+    background: pink;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(55) {
+    background: #b65252;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(56) {
+    background: pink;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(57) {
+    background: #b65252;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(58) {
+    background: pink;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(59) {
+    background: #b65252;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(60) {
+    background: pink;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(61) {
+    background: #b65252;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(62) {
+    background: pink;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(63) {
+    background: #b65252;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(64) {
+    background: pink;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(65) {
+    background: #b65252;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(66) {
+    background: pink;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(67) {
+    background: #b65252;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(68) {
+    background: pink;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(69) {
+    background: #b65252;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(70) {
+    background: pink;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(71) {
+    background: #b65252;
+    animation-delay: 1s;
+  }
+
+  .music .bar:nth-child(72) {
+    background: pink;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(73) {
+    background: #b65252;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(74) {
+    background: pink;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(75) {
+    background: #b65252;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(76) {
+    background: pink;
+    animation-delay: .2s;
+  }
+
+  .music .bar:nth-child(77) {
+    background: #b65252;
+    animation-delay: .4s;
+  }
+
+  .music .bar:nth-child(78) {
+    background: pink;
+    animation-delay: .6s;
+  }
+
+  .music .bar:nth-child(79) {
+    background: #b65252;
+    animation-delay: .8s;
+  }
+
+  .music .bar:nth-child(80) {
+    background: pink;
+    animation-delay: 1s;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+    }
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+    }
+  }
+
+  @keyframes movement {
+    0%, 100% {
+      height: 2px;
+    }
+    50% {
+      height: 80px;
+    }
+  }
+
+  .p2 {
+    text-align: right;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    padding-right: 2vw;
+  }

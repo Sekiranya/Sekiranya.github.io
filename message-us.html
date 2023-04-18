@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Kirim Pesan</title>
-    <link rel="stylesheet" href="message-us.css">
+    <link rel="stylesheet" href="style/message-us.css">
     <link rel="shortcut icon" href="asset/images/mb7.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -54,13 +54,13 @@
                     </div>       
        
                     <div class="input-form">
-                     <input class="name" type="text" id="name" placeholder="masukkan nama">
+                     <input class="name" type="text" id="name" placeholder="masukkan nama" required>
        
-                     <input class="date" type="date" id="date" placeholder="masukkan tanggal lahir">
+                     <input class="date" type="date" id="date" placeholder="masukkan tanggal lahir" required>
 
                      <br>
        
-                     <input class="radio" type="radio" id="Laki-laki" name="radioItem" value="Laki-laki">
+                     <input class="radio" type="radio" id="Laki-laki" name="radioItem" value="Laki-laki" required>
                      <label for="laki-laki">Laki-laki</label>
                
                      <input class="radio" type="radio" id="Perempuan" name="radioItem" value="Perempuan">
@@ -68,7 +68,7 @@
        
                      <br>
 
-                     <input type="text" class="message" id="message" placeholder="Pesan"></input>
+                     <input type="text" class="message" id="message" placeholder="Pesan" required></input>
                     </div>
        
                   </div>
@@ -95,79 +95,7 @@
             </div>
           </div>
           
-          <script>
-              var today = new Date();
-  
-              const txtName = document.getElementById("name");
-              const txtDate = document.getElementById("date");
-          
-              const txtMessage = document.getElementById("message");
-              const btn = document.getElementById("btn");
-          
-              const displayName = document.getElementById('display-name');
-              const displayDate = document.getElementById('display-date');
-              const displayMessage = document.getElementById('display-message');
-          
-              const displayRadio = document.getElementById('display_radio');
-              const radioBtns = document.querySelectorAll('input[name="radioItem"]');
-            
-              const displayTime = document.getElementById('display-time');
-          
-          function submitForm(e) {
-            e.preventDefault();
-            
-            let inputName = txtName.value;
-            let inputDate = txtDate.value;
-            let inputMessage = txtMessage.value;
-            let selectedMenu;
-            
-            let selectedDate = new Date(inputDate)
-            let date,month,year;
-            date = selectedDate.getDate();
-            month = selectedDate.getMonth() + 1;
-            year = selectedDate.getFullYear();
-            
-            if(date < 10) {
-            date = '0' + date;
-            }
-    
-            if (month < 10) {
-             month = '0' + month;
-            }
-  
-            date = date.toString().padStart(2, '0');
-            month = month.toString().padStart(2, '0');
-            const resultDate = `${date}/${month}/${year}`
-  
-            const currentTime = new Date().toString();
-  
-            for(const radioBtn of radioBtns) {
-               if(radioBtn.checked) {
-                selectedMenu = radioBtn.value;
-                break;
-               }
-            }
-            
-            displayName.innerHTML = inputName;
-            displayDate.innerText = resultDate;
-            displayMessage.innerHTML = inputMessage;
-            displayRadio.innerHTML = selectedMenu;
-            displayTime.innerHTML = currentTime;
-           
-            txtName.value = '';
-            txtDate.value = '';
-            txtMessage.value = '';
-  
-            if (name == "" || date == "" || radio == ""|| message == "") {
-              alert("Input tidak boleh kosong");
-              return false;
-            }
-  
-          }
-          
-          btn.addEventListener('click', submitForm);
-          
-          </script>
+
       </section>
 
   <!-- Footer -->
@@ -175,6 +103,6 @@
     <p class="p2">Created By Valentino Julian</p>
     <hr>
   <!-- footer end -->
-
   </body>
+ <script src="script/message-us.js"></script>
 </html>
