@@ -96,7 +96,7 @@ nav li:hover {
   }
 
   .row-row .display {
-    width: 100%;
+    width: 90%;
     flex-direction: column;
     margin-top: 2vh;
     margin-left: 0;
