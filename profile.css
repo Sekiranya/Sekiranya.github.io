@@ -58,12 +58,28 @@ hr {
   }
 
   .nav-links {
+    padding: 0;
     width: 100%;
     flex-direction: column;
   }
 
+  nav li {
+    display: block;
+    padding: 8px;
+    color: #333;
+    text-align: center;
+  }
+
+  .li-m {
+    display: block;
+    padding: 8px;
+    color: #333;
+    text-align: center;
+  }
+
   .navicon {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
   .row-row {
@@ -74,7 +90,19 @@ hr {
   .m-f .button {
     margin-top: 1vh;
     margin-bottom: 1vh;
-    width: 90%;
+    width: 100%;
+  }
+
+  .m-f .name {
+    width: 100%;
+  }
+
+  .m-f .date {
+    width: 100%;
+  }
+
+  .m-f .message {
+    width: 100%;
   }
 
   .row-row .display {

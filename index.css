@@ -57,12 +57,28 @@ nav a {
   }
 
   .nav-links {
+    padding: 0;
     width: 100%;
     flex-direction: column;
   }
 
+  nav li {
+    display: block;
+    padding: 8px;
+    color: #333;
+    text-align: center;
+  }
+
+  .li-m {
+    display: block;
+    padding: 8px;
+    color: #333;
+    text-align: center;
+  }
+
   .navicon {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
   .row-row {
@@ -73,13 +89,30 @@ nav a {
   .m-f .button {
     margin-top: 1vh;
     margin-bottom: 1vh;
-    width: 90%;
+    width: 100%;
+  }
+
+  .m-f .name {
+    width: 100%;
+  }
+
+  .m-f .date {
+    width: 100%;
+  }
+
+  .m-f .message {
+    width: 100%;
   }
 
   .row-row .display {
-    width: 75%;
+    width: 100%;
     flex-direction: column;
     margin-top: 2vh;
+    margin-left: 0;
+  }
+
+  .facil-desk {
+    font-size: medium;
   }
 }
 
@@ -157,7 +190,7 @@ hr {
   vertical-align: top;
   display: inline-block;
   text-align: center;
-  width: 16vw;
+  width: 15vw;
   padding-right: 12vw;
 }
 
@@ -254,14 +287,14 @@ hr {
 .name {
   border-radius: 5px;
   margin-bottom: 1vh;
-  width: 60%;
+  width: 85%;
   padding: 1px 2px;
 }
 
 .date {
   border-radius: 5px;
   margin-bottom: 1vh;
-  width: 61%;
+  width: 86%;
 }
 
 
@@ -270,7 +303,7 @@ hr {
 }
 
 .message {
-  width: 60%;
+  width: 85%;
   margin-bottom: 2vh;
   padding-bottom: 10vh;
   border: 2px;
